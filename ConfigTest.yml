@@ -1,1 +1,13 @@
-foo: Bar
+Tasks:
+  TaskName: MySampleTask # this will be the class of the task
+  TaskConfig: MySampleTaskConfig # this is a POCO of the config for the task
+  Companies: # there can be any number of companies 
+    Company1: # MySampleTaskConfig will have the properties under each company
+      CompanyId: 1
+      Template: "myCompany1Template"
+      Enabled: true
+    Company2:
+      CompanyId: 2
+      Template: "myCompany2Template"
+      Enabled: true
+  TaskSchedule: "*/30 * * * *" # cron of the task
